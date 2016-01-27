@@ -4,6 +4,8 @@
 <% @tasks.each do |task| %>
   <h2><%= link_to task.title, task %></h2>
   <p><%= task.description %></p>
+    <p><%= link_to "Mark as Complete", complete_task_path(task), method: :patch %></p>
+    <p><%= link_to "Delete", task, method: :delete, data: { confirm: "Are you sure?" } %></p>
 <% end %>
 <% else %>
 <%= render 'layouts/static_landing_page' %>
