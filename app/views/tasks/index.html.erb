@@ -1,8 +1,10 @@
 <!-- this corresponds to the index action in tasks_controller.r -->
 <!-- this is what displays the DewLists a current user has -->
+<% if user_signed_in? %>
 <% @tasks.each do |task| %>
-  <h2><%= link_to task.title, task  %></h2>
+  <h2><%= link_to task.title, task %></h2>
   <p><%= task.description %></p>
 <% end %>
-
-<%= link_to "New Task", new_task_path %>
+<% else %>
+<%= render 'layouts/static_landing_page' %>
+<% end %>
