@@ -1,7 +1,9 @@
 <!-- corresponding view to the show action in tasks_controller.rb -->
+<div class="col-md-6 col-md-offset-3">
 
 <h2><%= @task.title %></h2>
 <p><%= @task.description %></p>
 
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_task_path(@task) %>
+</div>

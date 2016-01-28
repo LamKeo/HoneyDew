@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :find_task, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     if user_signed_in?
@@ -42,7 +43,7 @@ end
   def complete
     @task = Task.find(params[:id])
     @task.update_attribute(:completed_at, Time.now)
-    redirect_to root_path
+    redirect_to root_path, notice: "Task successfully completed!"
   end
 
 private
