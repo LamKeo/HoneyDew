@@ -32,8 +32,8 @@ A task app for users to achieve short term goals.
 
 ### Technologies Used
 
-  - Ruby on Rails, Devise, bootstrap-sass, simple-form, postgresql.
-   
+  - Ruby on Rails, Devise, bootstrap-sass, simple-form, postgresql, HTML5, ERB.
+
 ####Links
 [Wireframes](https://www.justinmind.com/usernote/prototypes/18704982/18715490/18840028/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724)
 
